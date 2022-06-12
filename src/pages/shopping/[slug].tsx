@@ -54,12 +54,12 @@ export default function Product({ product }: ProductProps) {
           <h1
             className='text-3xl'
           >
-            {product?.attributes.name}
+            {product?.attributes?.name}
           </h1>
           <h4
             className="text-xl mt-4" 
           >
-            {textLocale[locale][0]} {product?.attributes.price}
+            {textLocale[locale][0]} {product?.attributes?.price}
           </h4>
           <div className=" border-brand-gray-300 border-solid w-full h-[1px] mt-6 bg-brand-gray-300"> </div>
           <p className="mt-6">{textLocale[locale][1]}</p>
@@ -68,15 +68,15 @@ export default function Product({ product }: ProductProps) {
           <div className="flex flex-row gap-8 mt-2">
             <div>
               <span>{textLocale[locale][3]}</span>
-              <p>{product?.attributes.height} cm</p>
+              <p>{product?.attributes?.height} cm</p>
             </div>
             <div>
               <span>{textLocale[locale][4]}</span>
-              <p>{product?.attributes.width} cm</p>
+              <p>{product?.attributes?.width} cm</p>
             </div>
             <div>
               <span>{textLocale[locale][5]}</span>
-              <p>{product?.attributes.depth} cm</p>
+              <p>{product?.attributes?.depth} cm</p>
             </div>
           </div>
           <label className="mt-6 block">{textLocale[locale][6]}</label>

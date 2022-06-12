@@ -25,7 +25,7 @@ export function Header(){
   const activeStyle = 'text-brand-orange-500'
 
   return(
-    <header className="flex flex-row flex-1 place-content-between items-center mt-4 ">
+    <header className="flex flex-row flex-1 place-content-between items-center mt-4">
 
        <section className='flex flex-row items-center'>
 
@@ -48,11 +48,11 @@ export function Header(){
        </section>
 
        <div className="flex items-center gap-4">
-         <Link href="https://github.com/seyadodin">
-           <img src="/images/github.svg" alt=''/>
+         <Link  href="https://github.com/seyadeodin">
+           <img className='cursor-pointer' src="/images/github.svg" alt=''/>
          </Link>
-         <Link href="https://linkedin.com/">
-           <img src="/images/linkedin.svg" alt=''/>
+         <Link href="https://www.linkedin.com/in/lucas-andrade-b4b77515a/">
+           <img className='cursor-pointer' src="/images/linkedin.svg" alt=''/>
          </Link>
           <button onClick={handleChangeLanguage} className='font-semibold'>
           <span className={router.locale == 'en' && activeStyle} >en</span>/<span  className={router.locale == 'pt-BR' && activeStyle}>pt</span>
