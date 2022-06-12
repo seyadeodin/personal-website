@@ -3,7 +3,7 @@ import Link from 'next/link'
 import LogoType from '../assets/logotype.svg'
 import { useRouter, NextRouter } from 'next/router'
 
-const menuText = {
+const menuText:{[key: string]} = {
   en: ['Home', 'About me', 'Portfolio', 'Store'],
   'pt-BR': ['Início', 'Sobre mim', 'Portfólio', 'Loja']
 }
@@ -11,7 +11,7 @@ const menuText = {
 
 export function Header(){
   const router = useRouter()
-  const locale = router.locale;
+  const locale: string = router.locale;
 
   function handleChangeLanguage(){
     console.log(locale)
@@ -55,7 +55,7 @@ export function Header(){
            <img className='cursor-pointer' src="/images/linkedin.svg" alt=''/>
          </Link>
           <button onClick={handleChangeLanguage} className='font-semibold'>
-          <span className={router.locale == 'en' && activeStyle} >en</span>/<span  className={router.locale == 'pt-BR' && activeStyle}>pt</span>
+          <span className={router.locale == 'en' ? activeStyle : ''} >en</span>/<span  className={router.locale == 'pt-BR' ? activeStyle : ''}>pt</span>
         </button>
        </div>
     </header>
